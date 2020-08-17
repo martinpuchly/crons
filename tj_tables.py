@@ -20,13 +20,12 @@ FTP_PASSWORD=os.getenv("FTP_PASSWORD")
 dir_path = os.getcwd()
 
 teamsID = {
-  "atim": 34597,
-  "dorast": 37435,
-  "ziaci": 34598
+  "atim": 41590,
+  "ziaci": 41591
 }
 
 def createTable(team, teamID):
-    r=requests.get("https://tj-druzstevnik-spacince.futbalnet.sk/tim/{}/".format(teamID))
+    r=requests.get("https://sportnet.sme.sk/futbalnet/k/tj-druzstevnik-spacince/tim/{}/".format(teamID))
     c=r.content
 
     page = BeautifulSoup(c, "html.parser")
