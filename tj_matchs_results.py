@@ -31,7 +31,7 @@ for match in matchs:
     match_datetime = match[1]
     fn_ID = match[2]
 
-    r=requests.get('https://www.zsfz.sk/zapas/{0}'.format(fn_ID))
+    r=requests.get('https://sportnet.sme.sk/futbalnet/z/zsfz/zapas/{0}'.format(fn_ID))
     c = r.content
     page = BeautifulSoup(c, "html.parser")
 
