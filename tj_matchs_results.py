@@ -20,7 +20,7 @@ MYSQL_DB=os.getenv("MYSQL_DB")
 today =  datetime.today().strftime('%Y-%m-%d')
 
 #ZAPASY DNES
-conn = mysql.connector.connect(user=MYSQL_USER, password=MYSQL_USER, host=MYSQL_PASSWORD, database=MYSQL_DB, port=MYSQL_PORT)
+conn = mysql.connector.connect(user=MYSQL_USER, password=MYSQL_PASSWORD, host=MYSQL_HOST, database=MYSQL_DB, port=MYSQL_PORT)
 cur = conn.cursor()
 
 cur.execute("SELECT id, match_datetime, fn_ID FROM matches WHERE match_datetime LIKE '{0}'".format(today+'%'))
